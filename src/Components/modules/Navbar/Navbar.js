@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/navbar.module.css";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -7,11 +8,11 @@ function Navbar() {
       <nav
         className={`${styles.navbar} ${styles.navbar_expand_lg} bg-none ${styles.navbar_dark} py-3`}
       >
-        <a href="index.html" className={`${styles.navbar_brand} px-lg-4 m-0`}>
+        <Link href={"/"} className={`${styles.navbar_brand} px-lg-4 m-0`}>
           <h1 className="m-0 display-4 text-uppercase text-white">
             Next-Coffee
           </h1>
-        </a>
+        </Link>
         <button
           type="button"
           className={`${styles.navbar_toggler}`}
@@ -21,19 +22,19 @@ function Navbar() {
           <span className={`${styles.navbar_toggler_icon}`}></span>
         </button>
         <div
-          className={`collapse ${styles.navbar_collapse} justify-between`}
+          className={` ${styles.navbar_collapse} justify-between`}
           id="navbarCollapse"
         >
           <div className={`${styles.navbar_nav} ml-auto p-4`}>
-            <a
-              href="index.html"
+            <Link
+              href="/"
               className={`${styles.nav_link} ${styles.active_nav_link}`}
             >
               Home
-            </a>
-            <a href="about.html" className={`${styles.nav_link}`}>
+            </Link>
+            <Link href="/about" className={`${styles.nav_link}`}>
               About
-            </a>
+            </Link>
             <a href="service.html" className={`${styles.nav_link}`}>
               Service
             </a>
